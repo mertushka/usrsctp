@@ -108,6 +108,7 @@ list(APPEND check_programs
 
 if (NOT WIN32)
 	# POSIX threads and C11 atomics
+	list(APPEND check_programs test_partial_delivery_race.c)
 	list(APPEND check_programs test_close_race.c)
 endif ()
 
